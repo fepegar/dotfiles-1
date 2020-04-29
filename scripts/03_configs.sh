@@ -93,11 +93,7 @@ fix_initial_nvim_health() {
 }
 
 install_atom_packages() {
-  # packages
-  apm install highlight-line language-haskell language-pug language-swift linter linter-eslint linter-jsonlint linter-rubocop linter-shellcheck linter-write-good relative-numbers vim-mode-plus vim-mode-plus-keymaps-for-surround
-
-  # themes and syntaxes
-  apm install peacock-syntax
+  apm stars --install
 }
 
 configure_git() {
@@ -105,9 +101,7 @@ configure_git() {
   git config --global user.email "${github_email}"
   git config --global github.user "${github_username}"
   git config --global credential.helper osxkeychain
-  git config --global push.default simple
-  git config --global rerere.enabled true
-  git config --global rerere.autoupdate true
+  # git config --global push.default simple
 }
 
 configure_pinboard_scripts() {

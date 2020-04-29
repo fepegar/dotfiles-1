@@ -1,5 +1,5 @@
 cleanup_brew() {
-  rm -rf "$(brew --cache)"
+  brew cleanup
 }
 
 cleanup_error_log() {

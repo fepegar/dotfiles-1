@@ -1,67 +1,57 @@
 install_brew_apps() {
-  brew install mpv --with-bundle
-  brew install sox --with-flac --with-lame --with-libvorbis
-  brew install zsh --without-etcdir
-
-  brew install aria2 chromedriver cpulimit duti eye-d3 ffmpeg ghi git git-ftp handbrake haskell-stack hr httpie imagemagick jq mas mediainfo mkvtoolnix mp4v2 onepass pup ripgrep rmlint shellcheck subliminal svgcleaner trash tree youtube-dl z
-
-  # install zsh_plugins
-  brew install zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-highlighting
-
-  # install apps from other taps
-  brew install laurent22/massren/massren
-  brew install neovim/neovim/neovim
-  brew install vitorgalvao/geotoad/geotoad
-
-  # install and configure tor
-  brew install tor torsocks
-  cp "$(brew --prefix)/etc/tor/torrc.sample" "$(brew --prefix)/etc/tor/torrc"
-  echo 'ExitNodes {us}' >> "$(brew --prefix)/etc/tor/torrc"
+  # Apps
+  brew install cmake
+  brew install ffmpeg
+  brew install googler
+  brew install htop  # an interactive process viewer for Unix
+  brew install imagemagick
+  brew install imgcat
+  brew install vim
+  brew install wget
 }
 
 install_cask_apps() {
   renew_sudo # to make the Caskroom on first install
-  brew cask install alfred anka-run apple-events atom bartender bettertouchtool blockblock calibre dolphin dropbox electron-api-demos fog gifloopcoder gitup google-chrome imageoptim imitone iterm2 keka oversight processing shotcut spectacle steam torbrowser transmission veertu-desktop whale whatsyoursign wwdc yacreader
 
-  brew cask install pokerstars --language='PT'
-
-  # install alternative versions
-  brew tap caskroom/versions
-  brew cask install affinity-designer-beta affinity-photo-beta dash3 google-chrome-canary screenflow5
-
-  # drivers
-  brew tap caskroom/drivers
-  renew_sudo
-  brew cask install xbox360-controller-driver
+  brew cask install anaconda
+  brew cask install atom
+  brew cask install dropbox
+  brew cask install evernote
+  brew cask install firefox
+  brew cask install gimp
+  brew cask install google-chrome
+  brew cask install iterm2
+  brew cask install itk-snap
+  brew cask install keka
+  brew cask install meld
+  brew cask install musixmatch
+  brew cask install openoffice
+  brew cask install processing
+  brew cask install pycharm-ce
+  brew cask install skype
+  brew cask install slack
+  brew cask install slicer-nightly
+  brew cask install spectacle
+  brew cask install spotify
+  brew cask install sublime-text
+  brew cask install telegram
+  brew cask install virtualbox
+  brew cask install visual-studio-code
+  brew cask install vlc
+  brew cask install zotero
 
   # prefpanes, qlplugins, colorpickers
-  brew cask install betterzipql epubquicklook qlcolorcode qlimagesize qlmarkdown qlplayground qlstephen quicklook-json quicklookase
-
-  # fonts
-  brew tap caskroom/fonts
-  # multiple
-  brew cask install font-alegreya font-alegreya-sans font-alegreya-sans-sc font-alegreya-sc
-  brew cask install font-fira-mono font-fira-sans
-  brew cask install font-input
-  brew cask install font-merriweather font-merriweather-sans
-  brew cask install font-pt-mono font-pt-sans font-pt-serif
-  brew cask install font-source-code-pro font-source-sans-pro font-source-serif-pro
-  # sans
-  brew cask install font-aileron font-bebas-neue font-exo2 font-montserrat font-lato font-open-sans font-open-sans-condensed font-signika
-  # serif
-  brew cask install font-abril-fatface font-butler font-gentium-book-basic font-playfair-display font-playfair-display-sc
-  # slab
-  brew cask install font-bitter font-kreon
-  # script
-  brew cask install font-pecita
-
-  # games
-  #brew cask install gridwars noiz2sa rootage torustrooper
+  brew cask install betterzipql
+  brew cask install qlmarkdown
+  brew cask install qlcolorcode
+  brew cask install qlimagesize
+  brew cask install qlstephen
+  brew cask install quicklook-json
 }
 
 install_tinyscripts() {
   brew tap vitorgalvao/tinyscripts
-  brew install annotmd cask-repair contagem-edp customise-terminal-notifier fastmerge gfv gifmaker human-media-time labelcolor lovecolor pedir-gas pinboardbackup pinboardlinkcheck pinboardwaybackmachine podbook prfixmaster progressbar ringtonemaker seren trello-purge-archives
+  brew install cask-repair
 }
 
 install_mas_apps() {

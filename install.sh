@@ -10,31 +10,27 @@ run_install_dotfiles() {
 
   initial_setup
   ask_details
-  sync_icloud
   update_system
 
   install_brew
-  install_python
-  install_ruby
-  install_node
 
   install_brew_apps
   install_cask_apps
   install_tinyscripts
-  install_mas_apps
+  #install_mas_apps
 
-  restore_settings
-  set_default_apps
-  # set_keyboard_shortcuts
-  install_commercial_fonts
-  configure_zsh
-  install_nvim_packages
-  fix_initial_nvim_health
+  # restore_settings
+  # set_default_apps
+  # # set_keyboard_shortcuts
+  # install_commercial_fonts
+  # configure_zsh
+  # install_nvim_packages
+  # fix_initial_nvim_health
   install_atom_packages
   configure_git
-  configure_pinboard_scripts
-  install_launchagents
-  lower_startup_chime
+  # configure_pinboard_scripts
+  # install_launchagents
+  # lower_startup_chime
 
   cleanup_brew
   cleanup_error_log
